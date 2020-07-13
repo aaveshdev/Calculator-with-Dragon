@@ -1,0 +1,292 @@
+select "GUI"
+select "math"
+ 
+win = newWindow()
+win.setSize(400,550)
+win.setLocation(200,100)
+win.setLayout(noLayout())
+win.setNoTitleBar()
+win.setBorderRadius(400,550,30,30)
+win.setBackgroundColor(174, 214, 241)
+ 
+calp = newPanel()
+calp.setSize(352,82)
+calp.setLocation(29,39)
+calp.setLayout(noLayout())
+calp.setBackgroundColor(245,245,245)
+//Top Panel with Answers
+ 
+anst = newTextBox("")
+anst.setSize(350,50)
+anst.setLocation(0,0)
+anst.setHorizontalAlignment(Align.RIGHT)
+anst.setFont("Arial","",40)
+anst.setBackgroundColor(245,245,245)
+anst.setEditable(false)
+anst.setTextColor(0,0,0)
+anst.removeBorder()
+//Calculation TextBox
+ 
+manst = newText("")
+manst.setSize(300,30)
+manst.setLocation(0,55)
+manst.setFont("Arial","",20)
+//Answer Box
+ 
+onbt = newButton("1")
+onbt.setSize(80,80)
+onbt.setLocation(30,150)
+onbt.setFont("Arial","",45)
+onbt.setBackgroundColor(236, 112, 99)
+onbt.setTextColor(255,255,255)
+onbt.setCursor(Cursor.HAND)
+//Value 1 button
+ 
+ 
+twbt = newButton("2")
+twbt.setSize(80,80)
+twbt.setLocation(120,150)
+twbt.setFont("Arial","",45)
+twbt.setBackgroundColor(236, 112, 99)
+twbt.setTextColor(255,255,255)
+twbt.setCursor(Cursor.HAND)
+//Value 2 button
+ 
+thbt = newButton("3")
+thbt.setSize(80,80)
+thbt.setLocation(210,150)
+thbt.setFont("Arial","",45)
+thbt.setBackgroundColor(236, 112, 99)
+thbt.setTextColor(255,255,255)
+thbt.setCursor(Cursor.HAND)
+//Value 3 button
+ 
+clbt = newButton("C")
+clbt.setSize(80,80)
+clbt.setLocation(300,150)
+clbt.setFont("Arial","",45)
+clbt.setBackgroundColor( 22, 160, 133 )
+clbt.setTextColor(255,255,255)
+clbt.setCursor(Cursor.HAND)
+//Value Clear button
+ 
+ 
+frbt = newButton("4")
+frbt.setSize(80,80)
+frbt.setLocation(30,245)
+frbt.setFont("Arial","",45)
+frbt.setBackgroundColor(236, 112, 99)
+frbt.setTextColor(255,255,255)
+frbt.setCursor(Cursor.HAND)
+//Value 4 button
+ 
+fvbt = newButton("5")
+fvbt.setSize(80,80)
+fvbt.setLocation(120,245)
+fvbt.setFont("Arial","",45)
+fvbt.setBackgroundColor(236, 112, 99)
+fvbt.setTextColor(255,255,255)
+fvbt.setCursor(Cursor.HAND)
+//Value 5 button
+ 
+ 
+sxbt = newButton("6")
+sxbt.setSize(80,80)
+sxbt.setLocation(210,245)
+sxbt.setFont("Arial","",45)
+sxbt.setBackgroundColor(236, 112, 99)
+sxbt.setTextColor(255,255,255)
+sxbt.setCursor(Cursor.HAND)
+//Value 6 button
+ 
+ 
+plbt = newButton("+")
+plbt.setSize(80,80)
+plbt.setLocation(300,245)
+plbt.setFont("Arial","",45)
+plbt.setBackgroundColor( 22, 160, 133 )
+plbt.setTextColor(255,255,255)
+plbt.setCursor(Cursor.HAND)
+//Value + button
+ 
+svbt = newButton("7")
+svbt.setSize(80,80)
+svbt.setLocation(30,340)
+svbt.setFont("Arial","",45)
+svbt.setBackgroundColor(236, 112, 99)
+svbt.setTextColor(255,255,255)
+svbt.setCursor(Cursor.HAND)
+//Value 7 button
+ 
+ 
+etbt = newButton("8")
+etbt.setSize(80,80)
+etbt.setLocation(120,340)
+etbt.setFont("Arial","",45)
+etbt.setBackgroundColor(236, 112, 99)
+etbt.setTextColor(255,255,255)
+etbt.setCursor(Cursor.HAND)
+//Value 8 button
+ 
+nibt = newButton("9")
+nibt.setSize(80,80)
+nibt.setLocation(210,340)
+nibt.setFont("Arial","",45)
+nibt.setBackgroundColor(236, 112, 99)
+nibt.setTextColor(255,255,255)
+nibt.setCursor(Cursor.HAND)
+//Value 9 button
+ 
+mnbt = newButton("-")
+mnbt.setSize(80,80)
+mnbt.setLocation(300,340)
+mnbt.setFont("Arial","",45)
+mnbt.setBackgroundColor( 22, 160, 133 )
+mnbt.setTextColor(255,255,255)
+mnbt.setCursor(Cursor.HAND)
+//Value - button
+ 
+eqbt = newButton("=")
+eqbt.setSize(80,80)
+eqbt.setLocation(30,440)
+eqbt.setFont("Arial","",45)
+eqbt.setBackgroundColor(22, 160, 133 )
+eqbt.setTextColor(255,255,255)
+eqbt.setCursor(Cursor.HAND)
+//Value = button
+ 
+zrbt = newButton("0")
+zrbt.setSize(80,80)
+zrbt.setLocation(120,440)
+zrbt.setFont("Arial","",45)
+zrbt.setBackgroundColor(236, 112, 99)
+zrbt.setTextColor(255,255,255)
+zrbt.setCursor(Cursor.HAND)
+//Value 0 button
+ 
+mlbt = newButton("*")
+mlbt.setSize(80,80)
+mlbt.setLocation(210,440)
+mlbt.setFont("Arial","",45)
+mlbt.setBackgroundColor(22, 160, 133 )
+mlbt.setTextColor(255,255,255)
+mlbt.setCursor(Cursor.HAND)
+//Value * button
+ 
+dvbt = newButton("/")
+dvbt.setSize(80,80)
+dvbt.setLocation(300,440)
+dvbt.setFont("Arial","",45)
+dvbt.setBackgroundColor( 22, 160, 133 )
+dvbt.setTextColor(255,255,255)
+dvbt.setCursor(Cursor.HAND)
+//Value / button
+ 
+ 
+//Click Operations Starts Here
+onbt.onClick(func(){
+aval = anst.getText()
+anst.setText(aval+"1")
+})
+ 
+twbt.onClick(func(){
+aval = anst.getText()
+anst.setText(aval+"2")
+})
+ 
+thbt.onClick(func(){
+aval = anst.getText()
+anst.setText(aval+"3")
+})
+ 
+frbt.onClick(func(){
+aval = anst.getText()
+anst.setText(aval+"4")
+})
+ 
+fvbt.onClick(func(){
+aval = anst.getText()
+anst.setText(aval+"5")
+})
+ 
+sxbt.onClick(func(){
+aval = anst.getText()
+anst.setText(aval+"6")
+})
+ 
+svbt.onClick(func(){
+aval = anst.getText()
+anst.setText(aval+"7")
+})
+ 
+etbt.onClick(func(){
+aval = anst.getText()
+anst.setText(aval+"8")
+})
+ 
+nibt.onClick(func(){
+aval = anst.getText()
+anst.setText(aval+"9")
+})
+ 
+zrbt.onClick(func(){
+aval = anst.getText()
+anst.setText(aval+"0")
+})
+ 
+clbt.onClick(func(){
+ 
+anst.setText("")
+manst.setText("")
+})
+ 
+plbt.onClick(func(){
+aval = anst.getText()
+anst.setText(aval+"+")
+})
+ 
+mnbt.onClick(func(){
+aval = anst.getText()
+anst.setText(aval+"-")
+})
+ 
+mlbt.onClick(func(){
+aval = anst.getText()
+anst.setText(aval+"*")
+})
+ 
+dvbt.onClick(func(){
+aval = anst.getText()
+anst.setText(aval+"/")
+})
+ 
+eqbt.onClick(func(){
+aval = anst.getText()
+val = eval(aval)
+//eval function of math module for calculations
+ 
+manst.setText(val)
+})
+ 
+calp.add(anst)
+calp.add(manst)
+win.add(thbt)
+win.add(twbt)
+win.add(onbt)
+win.add(calp)
+win.add(clbt)
+win.add(frbt)
+win.add(fvbt)
+win.add(sxbt)
+win.add(plbt)
+win.add(svbt)
+win.add(etbt)
+win.add(nibt)
+win.add(mnbt)
+win.add(eqbt)
+win.add(zrbt)
+win.add(mlbt)
+win.add(dvbt)
+ 
+ 
+win.setVisible()
